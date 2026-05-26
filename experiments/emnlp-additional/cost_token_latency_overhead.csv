@@ -1,0 +1,5 @@
+condition,model_calls,prompt_token_units,completion_token_units,total_token_units,latency_units,cost_units,accepted_claim_recall,unsupported_commit_rate,evidence_bandwidth_multiplier,deterministic,live_model_calls
+single-shot-context-window,1,1536,144,1680,2.0,1.68,0.375,1.0,1.0,True,0
+flat-topk-retrieval,1,1536,176,1712,2.0,1.712,0.625,1.0,1.6667,True,0
+recursive-evidence-cache,8,2560,224,2784,9.6667,2.784,1.0,1.0,2.6667,True,0
+recursive-traceguard-dfs,8,2560,224,2784,9.6667,2.784,1.0,0.0,2.6667,True,0

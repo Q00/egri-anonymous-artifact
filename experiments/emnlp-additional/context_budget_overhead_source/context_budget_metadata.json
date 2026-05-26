@@ -1,0 +1,14 @@
+{
+  "benchmark_name": "context-budget-pressure",
+  "claim": "Recursive evidence caching preserves inspectable supported claims under a fixed context budget; TraceGuard prevents pressure-induced unsupported commits.",
+  "condition_names": [
+    "single-shot-context-window",
+    "flat-topk-retrieval",
+    "recursive-evidence-cache",
+    "recursive-traceguard-dfs"
+  ],
+  "deterministic": true,
+  "fixture_count": 10,
+  "live_model_calls": 0,
+  "network_calls": 0
+}

@@ -1,0 +1,133 @@
+{
+  "baseline_variant": "egri_without_traceguard_safe_parent_control",
+  "definition": "Same 8 primary fixtures; commit the fixture-provided safe parent synthesis without TraceGuard as a benign ungated control.",
+  "fail_count": 0,
+  "fixture_count": 8,
+  "live_model_calls": false,
+  "network_calls": false,
+  "omitted_fact_commit_count": 0,
+  "pass_count": 8,
+  "rows": [
+    {
+      "fixture_category": "simple_truncation",
+      "fixture_id": "simple-truncation-01",
+      "omitted_fact_ids_committed": [],
+      "retained_fact_ids_covered": [
+        "LP-01-001",
+        "LP-01-002",
+        "LP-01-003",
+        "LP-01-004"
+      ],
+      "traceguard_accepts_safe_parent": true,
+      "traceguard_rejections": [],
+      "ungated_safe_pass": true,
+      "unsupported_commit": false
+    },
+    {
+      "fixture_category": "simple_truncation",
+      "fixture_id": "simple-truncation-02",
+      "omitted_fact_ids_committed": [],
+      "retained_fact_ids_covered": [
+        "LP-02-001",
+        "LP-02-002",
+        "LP-02-003",
+        "LP-02-004"
+      ],
+      "traceguard_accepts_safe_parent": true,
+      "traceguard_rejections": [],
+      "ungated_safe_pass": true,
+      "unsupported_commit": false
+    },
+    {
+      "fixture_category": "distractor_heavy",
+      "fixture_id": "distractor-heavy-01",
+      "omitted_fact_ids_committed": [],
+      "retained_fact_ids_covered": [
+        "LP-03-001",
+        "LP-03-002",
+        "LP-03-003",
+        "LP-03-004"
+      ],
+      "traceguard_accepts_safe_parent": true,
+      "traceguard_rejections": [],
+      "ungated_safe_pass": true,
+      "unsupported_commit": false
+    },
+    {
+      "fixture_category": "distractor_heavy",
+      "fixture_id": "distractor-heavy-02",
+      "omitted_fact_ids_committed": [],
+      "retained_fact_ids_covered": [
+        "LP-04-001",
+        "LP-04-002",
+        "LP-04-003",
+        "LP-04-004"
+      ],
+      "traceguard_accepts_safe_parent": true,
+      "traceguard_rejections": [],
+      "ungated_safe_pass": true,
+      "unsupported_commit": false
+    },
+    {
+      "fixture_category": "cross_chunk_dependency",
+      "fixture_id": "cross-chunk-dependency-01",
+      "omitted_fact_ids_committed": [],
+      "retained_fact_ids_covered": [
+        "LP-05-001",
+        "LP-05-002",
+        "LP-05-003",
+        "LP-05-004"
+      ],
+      "traceguard_accepts_safe_parent": true,
+      "traceguard_rejections": [],
+      "ungated_safe_pass": true,
+      "unsupported_commit": false
+    },
+    {
+      "fixture_category": "cross_chunk_dependency",
+      "fixture_id": "cross-chunk-dependency-02",
+      "omitted_fact_ids_committed": [],
+      "retained_fact_ids_covered": [
+        "LP-06-001",
+        "LP-06-002",
+        "LP-06-003",
+        "LP-06-004"
+      ],
+      "traceguard_accepts_safe_parent": true,
+      "traceguard_rejections": [],
+      "ungated_safe_pass": true,
+      "unsupported_commit": false
+    },
+    {
+      "fixture_category": "omitted_fact_temptation",
+      "fixture_id": "omitted-fact-temptation-01",
+      "omitted_fact_ids_committed": [],
+      "retained_fact_ids_covered": [
+        "LP-07-001",
+        "LP-07-002",
+        "LP-07-003",
+        "LP-07-004"
+      ],
+      "traceguard_accepts_safe_parent": true,
+      "traceguard_rejections": [],
+      "ungated_safe_pass": true,
+      "unsupported_commit": false
+    },
+    {
+      "fixture_category": "chunk_only_citation_trap",
+      "fixture_id": "chunk-only-citation-trap-01",
+      "omitted_fact_ids_committed": [],
+      "retained_fact_ids_covered": [
+        "LP-08-001",
+        "LP-08-002",
+        "LP-08-003",
+        "LP-08-004"
+      ],
+      "traceguard_accepts_safe_parent": true,
+      "traceguard_rejections": [],
+      "ungated_safe_pass": true,
+      "unsupported_commit": false
+    }
+  ],
+  "unsupported_commit_count": 0
+}

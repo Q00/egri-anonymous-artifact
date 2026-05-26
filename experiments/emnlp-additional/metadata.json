@@ -1,0 +1,67 @@
+{
+  "deterministic": true,
+  "live_model_calls": 0,
+  "network_calls": 0,
+  "offline_benchmark": {
+    "dataset_path": "experiments/emnlp-additional/real_multidataset_scaled_80.jsonl",
+    "evaluation_count": 400,
+    "example_count": 80,
+    "output_dir": "experiments/emnlp-additional/real_multidataset_scaled_offline",
+    "output_paths": [
+      "experiments/emnlp-additional/real_multidataset_scaled_offline/per_example_results.jsonl",
+      "experiments/emnlp-additional/real_multidataset_scaled_offline/per_example_evaluations.jsonl",
+      "experiments/emnlp-additional/real_multidataset_scaled_offline/per_policy_summary.json",
+      "experiments/emnlp-additional/real_multidataset_scaled_offline/per_policy_summary.csv",
+      "experiments/emnlp-additional/real_multidataset_scaled_offline/run_metadata.json"
+    ],
+    "policy_names": [
+      "vanilla-single",
+      "chunk-map-reduce",
+      "evidence-gated-nonrecursive",
+      "recursive-ungated",
+      "recursive-traceguard-stub"
+    ],
+    "policy_result_count": 400,
+    "summary_count": 5
+  },
+  "overhead": {
+    "claim": "EGRI trades additional bounded calls/tokens/latency units for inspectable evidence bandwidth and zero unsupported commits in the guarded condition.",
+    "path": "experiments/emnlp-additional/cost_token_latency_overhead.csv",
+    "rows": 4
+  },
+  "posthoc_baseline": {
+    "condition": "posthoc-checker-after-commit",
+    "deterministic": true,
+    "example_count": 80,
+    "live_model_calls": 0,
+    "posthoc_flag_rate": 1.0,
+    "precommit_block_rate": 0.0,
+    "unsupported_commit_rate": 1.0
+  },
+  "requested_experiments": [
+    "real_multidataset_scaleup",
+    "posthoc_checker_baseline",
+    "cost_token_latency_overhead"
+  ],
+  "run_mode": "offline-deterministic-emnlp-additional-experiments",
+  "scaled_dataset": {
+    "dataset_counts": {
+      "2wikimultihopqa": 20,
+      "asqa": 20,
+      "hotpotqa": 20,
+      "qasper": 20
+    },
+    "example_count": 80,
+    "path": "experiments/emnlp-additional/real_multidataset_scaled_80.jsonl"
+  },
+  "traceguard_precommit": {
+    "condition": "recursive-traceguard-precommit",
+    "deterministic": true,
+    "example_count": 80,
+    "live_model_calls": 0,
+    "posthoc_flag_rate": 1.0,
+    "precommit_block_rate": 1.0,
+    "unsupported_commit_rate": 0.0
+  },
+  "warning": "Additional EMNLP artifacts are deterministic runtime-control evidence, not live model-quality results."
+}

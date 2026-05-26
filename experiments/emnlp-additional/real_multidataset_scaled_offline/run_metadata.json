@@ -1,0 +1,12 @@
+{
+  "dataset_path": "experiments/emnlp-additional/real_multidataset_scaled_80.jsonl",
+  "example_count": 80,
+  "live_model_calls": 0,
+  "policy_names": [
+    "vanilla-single",
+    "chunk-map-reduce",
+    "evidence-gated-nonrecursive",
+    "recursive-ungated",
+    "recursive-traceguard-stub"
+  ]
+}

@@ -1,0 +1,109 @@
+"""Ouroboros CLI main entry point.
+
+This module defines the main Typer application and registers
+all command groups for the Ouroboros CLI.
+
+Command shortcuts (v0.8.0+):
+    ouroboros run seed.yaml          # shorthand for: ouroboros run workflow seed.yaml
+    ouroboros init "Build an API"    # shorthand for: ouroboros init start "Build an API"
+    ouroboros monitor                # shorthand for: ouroboros tui monitor
+"""
+
+from typing import Annotated
+
+import typer
+
+from ouroboros import __version__
+from ouroboros.cli.commands import (
+    cancel,
+    config,
+    detect,
+    init,
+    mcp,
+    pm,
+    resume,
+    rlm,
+    run,
+    setup,
+    status,
+    tui,
+    uninstall,
+)
+from ouroboros.cli.formatters import console
+
+# Create the main Typer app
+app = typer.Typer(
+    name="ouroboros",
+    help="Ouroboros - Self-Improving AI Workflow System",
+    no_args_is_help=True,
+    rich_markup_mode="rich",
+)
+
+# Register command groups
+app.add_typer(init.app, name="init")
+app.add_typer(run.app, name="run")
+app.add_typer(config.app, name="config")
+app.add_typer(status.app, name="status")
+app.add_typer(cancel.app, name="cancel")
+app.add_typer(mcp.app, name="mcp")
+app.add_typer(setup.app, name="setup")
+app.add_typer(detect.app, name="detect")
+app.add_typer(tui.app, name="tui")
+app.add_typer(pm.app, name="pm")
+app.add_typer(resume.app, name="resume")
+app.add_typer(uninstall.app, name="uninstall")
+app.command(name="rlm")(rlm.command)
+
+
+# Top-level convenience aliases
+@app.command(hidden=True)
+def monitor(
+    backend: Annotated[
+        str,
+        typer.Option(
+            "--backend",
+            help="TUI backend to use: 'python' (default) or 'slt' (native binary).",
+        ),
+    ] = "python",
+) -> None:
+    """Launch the TUI monitor (shorthand for 'ouroboros tui monitor')."""
+    tui.monitor_command(backend=backend)
+
+
+def version_callback(value: bool) -> None:
+    """Print version and exit."""
+    if value:
+        console.print(f"[bold cyan]Ouroboros[/] version [green]{__version__}[/]")
+        raise typer.Exit()
+
+
+@app.callback()
+def main(
+    version: Annotated[
+        bool | None,
+        typer.Option(
+            "--version",
+            "-V",
+            callback=version_callback,
+            is_eager=True,
+            help="Show version and exit.",
+        ),
+    ] = None,
+) -> None:
+    """Ouroboros - Self-Improving AI Workflow System.
+
+    A self-improving AI workflow system with 6 phases:
+    Big Bang, PAL Router, Execution, Resilience, Evaluation, and Consensus.
+
+    [bold]Quick Start:[/]
+
+        ouroboros init "Build a REST API"     Start interview
+        ouroboros run seed.yaml               Execute workflow
+        ouroboros monitor                     Launch TUI monitor
+
+    Use [bold cyan]ouroboros COMMAND --help[/] for command-specific help.
+    """
+    pass
+
+
+__all__ = ["app", "main"]

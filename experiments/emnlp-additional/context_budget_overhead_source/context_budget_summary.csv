@@ -1,0 +1,5 @@
+condition_name,recursive,traceguard_enabled,visible_leaf_facts,parent_context_budget_tokens,deterministic,live_model_calls,fixture_count,mean_supported_claim_recall,mean_context_pressure,mean_evidence_bandwidth_multiplier,unsupported_rejection_rate,unsupported_commit_rate,final_parent_commit_rate
+single-shot-context-window,False,False,3,1536,True,0,10,0.375,2.6667,1.0,0.0,1.0,1.0
+flat-topk-retrieval,False,False,5,1536,True,0,10,0.625,1.6,1.6667,0.0,1.0,1.0
+recursive-evidence-cache,True,False,8,1536,True,0,10,1.0,1.0,2.6667,0.0,1.0,1.0
+recursive-traceguard-dfs,True,True,8,1536,True,0,10,1.0,1.0,2.6667,1.0,0.0,1.0

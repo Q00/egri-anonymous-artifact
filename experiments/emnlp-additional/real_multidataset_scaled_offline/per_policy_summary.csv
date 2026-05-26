@@ -1,0 +1,6 @@
+policy_name,example_count,mean_answer_exact_match,mean_answer_contains_match,mean_citation_precision,mean_citation_recall,mean_citation_f1,mean_unsupported_citation_rate,abstention_rate
+vanilla-single,80,0.0,1.0,0.3333333333333333,1.0,0.5,0.6666666666666666,0.0
+chunk-map-reduce,80,0.0,1.0,0.3333333333333333,1.0,0.5,0.6666666666666666,0.0
+evidence-gated-nonrecursive,80,1.0,1.0,1.0,1.0,1.0,0.0,0.0
+recursive-ungated,80,0.0,1.0,0.3333333333333333,1.0,0.5,0.6666666666666666,0.0
+recursive-traceguard-stub,80,1.0,1.0,1.0,1.0,1.0,0.0,0.0

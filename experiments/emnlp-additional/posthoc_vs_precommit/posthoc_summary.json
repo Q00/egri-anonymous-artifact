@@ -1,0 +1,20 @@
+{
+  "posthoc-checker-after-commit": {
+    "condition": "posthoc-checker-after-commit",
+    "deterministic": true,
+    "example_count": 80,
+    "live_model_calls": 0,
+    "posthoc_flag_rate": 1.0,
+    "precommit_block_rate": 0.0,
+    "unsupported_commit_rate": 1.0
+  },
+  "recursive-traceguard-precommit": {
+    "condition": "recursive-traceguard-precommit",
+    "deterministic": true,
+    "example_count": 80,
+    "live_model_calls": 0,
+    "posthoc_flag_rate": 1.0,
+    "precommit_block_rate": 1.0,
+    "unsupported_commit_rate": 0.0
+  }
+}
